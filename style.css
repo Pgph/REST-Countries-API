@@ -1,5 +1,33 @@
+:root {
+  --color-text: hsl(200, 15%, 8%);
+  --color-input: hsl(0, 0%, 52%);
+  --color-background: hsl(0, 0%, 98%);
+  /* --color-white: hsl(0, 0%, 100%); */
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
-  /* padding: 0; */
+  padding: 0;
+}
+
+header,
+main {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 70px;
+  list-style: none;
+}
+
+li img {
+  aspect-ratio: 160/98;
+  width: 100%;
+}
+
+.info-container {
+  padding: 15px 10px;
 }
