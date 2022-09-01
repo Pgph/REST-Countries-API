@@ -14,9 +14,9 @@ const createInfoElement = (labelName, value) => {
 
 const createFlagImageElement = (country) => {
   const imgContainerElement = document.createElement("div");
-
   const imgElement = document.createElement("img");
   imgElement.src = country.flagUrl;
+  imgElement.alt = `${country.name} flag`;
 
   imgContainerElement.appendChild(imgElement);
   return imgContainerElement;
@@ -30,8 +30,9 @@ const createCountryItemElement = (country) => {
   const infoContainerElement = document.createElement("div");
   infoContainerElement.classList.add("info-container");
 
-  const countryNameElement = document.createElement("span");
+  const countryNameElement = document.createElement("strong");
   countryNameElement.innerText = country.name;
+  countryNameElement.classList.add("country-name");
 
   infoContainerElement.appendChild(countryNameElement);
 
@@ -58,5 +59,6 @@ const createListElement = (countries) => {
 };
 export const renderCountriesList = (countries) => {
   const rootElement = document.querySelector("#root");
+  rootElement.innerHTML = "";
   rootElement.appendChild(createListElement(countries));
 };
