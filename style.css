@@ -97,6 +97,7 @@ li a {
   color: var(--color-text);
   text-decoration: none;
 }
+
 .info-container {
   padding: 30px 20px;
 }
@@ -137,6 +138,34 @@ li a {
 .border-countries-container {
   grid-column-start: 1;
   grid-column-end: 3;
+}
+
+.toggleButton {
+  border: solid 1px var(--color-text);
+  padding: 3px 5px;
+  border-radius: 6px;
+  color: var(--color-text);
+}
+.toggleButton:hover {
+  background: var(--color-text);
+  color: var(--color-background);
+}
+
+.toggleButton.dark {
+  border: solid 1px var(--color-background);
+}
+.toggleButton.dark:hover {
+  background: var(--color-background);
+  color: var(--color-text);
+}
+
+.dark {
+  background: var(--color-text);
+  color: var(--color-background);
+}
+
+body.dark a {
+  color: var(--color-background);
 }
 
 @media screen and (max-width: 1024px) {

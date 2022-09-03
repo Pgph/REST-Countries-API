@@ -153,3 +153,45 @@ export const renderCountryDetails = (country) => {
   rootElement.appendChild(createDetailButton("Go back", "/"));
   rootElement.appendChild(createDetailElement(country));
 };
+
+const headerContent = document.querySelector(".header-content");
+const header = document.querySelector("header");
+const body = document.querySelector("body");
+const main = document.querySelector("main");
+const btn = document.createElement("button");
+
+btn.classList.add("toggleButton");
+btn.innerText = "Light Theme";
+headerContent.appendChild(btn);
+
+let theme = localStorage.getItem("theme") || "light";
+console.log(theme);
+
+btn.addEventListener("click", () => {
+  if (theme === "dark") {
+    console.log("byłem czarny jestem biały");
+    theme = "light";
+    btn.innerText = "Light Theme";
+    btn.classList.remove("dark");
+    body.classList.remove("dark");
+    header.classList.remove("dark");
+    main.classList.remove("dark");
+  } else {
+    console.log("byłem biały jestem czarny");
+    theme = "dark";
+    btn.innerText = "Dark Theme";
+    btn.classList.add("dark");
+    body.classList.add("dark");
+    header.classList.add("dark");
+    main.classList.add("dark");
+  }
+  localStorage.setItem("theme", theme);
+});
+
+if (theme === "dark") {
+  btn.innerText = "Dark Theme";
+  btn.classList.add("dark");
+  body.classList.add("dark");
+  header.classList.add("dark");
+  main.classList.add("dark");
+}
