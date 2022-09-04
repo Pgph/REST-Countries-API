@@ -169,7 +169,6 @@ console.log(theme);
 
 btn.addEventListener("click", () => {
   if (theme === "dark") {
-    console.log("byłem czarny jestem biały");
     theme = "light";
     btn.innerText = "Light Theme";
     btn.classList.remove("dark");
@@ -177,7 +176,6 @@ btn.addEventListener("click", () => {
     header.classList.remove("dark");
     main.classList.remove("dark");
   } else {
-    console.log("byłem biały jestem czarny");
     theme = "dark";
     btn.innerText = "Dark Theme";
     btn.classList.add("dark");

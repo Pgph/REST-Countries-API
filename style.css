@@ -189,3 +189,24 @@ body.dark a {
     justify-content: center;
   }
 }
+
+@media (prefers-colors-scheme: dark) {
+  .toggleButton {
+    background: var(--color-text);
+    color: var(--color-background);
+    border: solid 1px var(--color-background);
+  }
+  .toggleButton:hover {
+    background: var(--color-background);
+    color: var(--color-text);
+  }
+
+  body {
+    background: var(--color-text);
+    color: var(--color-background);
+  }
+
+  body a {
+    color: var(--color-background);
+  }
+}
